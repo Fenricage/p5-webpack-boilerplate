@@ -1,4 +1,4 @@
-import p from 'p5';
+import p5 from 'p5';
 
 const sketch = (p) => {
 
@@ -8,18 +8,16 @@ const sketch = (p) => {
   window.p = p;
 
 
-
   p.setup = () => {
     p.createCanvas(canvasWidth, canvasHeight)
     p.background(255, 255, 255);
   }
 
   p.draw = () => {
-      p.circle(30, 30, 20);
+    p.circle(30, 30, 20);
   }
-
 
 
 }
 
-new p(sketch)
+new p5(sketch)
