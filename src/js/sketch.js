@@ -1,21 +1,25 @@
-import p5 from 'p5';
+import p from 'p5';
 
-const sketch =(p5) => {
+const sketch = (p) => {
 
-  const canvasWidth = p5.windowWidth;
-  const canvasHeight = p5.windowHeight;
+  const canvasWidth = p.windowWidth;
+  const canvasHeight = p.windowHeight;
 
-  window.p5 = p5;
+  window.p = p;
 
-  p5.setup = () => {
-    let canvas = p5.createCanvas(canvasWidth, canvasHeight);
-    canvas.parent('sketch');
-    p5.background(0, 0, 0);
+
+
+  p.setup = () => {
+    p.createCanvas(canvasWidth, canvasHeight)
+    p.background(255, 255, 255);
   }
 
-  p5.draw = () => {
-    // drawing here
+  p.draw = () => {
+      p.circle(30, 30, 20);
   }
+
+
+
 }
 
-export default sketch;
+new p(sketch)
